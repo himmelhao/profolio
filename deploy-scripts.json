@@ -1,0 +1,9 @@
+{
+  "name": "deploy",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy:vercel": "npm run build && npx vercel --prod",
+    "deploy:surge": "npm run build && npx surge dist",
+    "deploy:netlify": "npm run build && echo 'Drag the dist folder to netlify.com'"
+  }
+}
