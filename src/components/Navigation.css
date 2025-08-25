@@ -37,19 +37,27 @@
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--space-xl);
-  width: 100%;
+  width: 90%;
 }
 
 @media (min-width: 1400px) {
   .nav-container {
-    max-width: 1400px;
+    max-width: 1600px;
     padding: 0 var(--space-2xl);
+    width: 85%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .nav-container {
+    max-width: 1800px;
+    width: 80%;
   }
 }
 
