@@ -105,7 +105,7 @@ const About = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/src/images/profile.jpg"
+                  src="/profile.jpg"
                   alt="Profile"
                   className="profile-photo"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}

@@ -66,7 +66,6 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2>Projects</h2>
           <div className="featured-grid">
             {workProjects.map((project, index) => (
               <motion.div

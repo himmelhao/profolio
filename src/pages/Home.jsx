@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, Mail, Database, Cloud, Code, Hexagon, Cpu, Brain, 
+import { ArrowRight, Download, Github, Linkedin, Database, Cloud, Code, Hexagon, Cpu, Brain, 
          Terminal, Layers, Eye, Settings, Zap, Shield, FileCode, Boxes, BookOpen, Server, X, 
          MapPin, Calendar, Award, GraduationCap, Briefcase, Clock, Star, Building, School } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -184,7 +184,7 @@ const Home = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="src/images/profile.jpg"
+                  src="/profile.jpg"
                   alt="Profile"
                   className="profile-photo"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
@@ -199,12 +199,6 @@ const Home = () => {
                   <a href="https://www.linkedin.com/in/haohu1108/" className="social-link" aria-label="LinkedIn">
                     <Linkedin size={24} />
                   </a>
-                  <a href="mailto:huhaohu001108@gmail.com" className="social-link" aria-label="Email">
-                    <Mail size={24} />
-                  </a>
-                  <button className="social-link cv-button" title="View My CV">
-                    CV
-                  </button>
                 </div>
               </div>
             </div>
