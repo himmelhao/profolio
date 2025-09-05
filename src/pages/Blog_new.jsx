@@ -31,7 +31,11 @@ const Blog = () => {
             <div className="planned-topics">
               <h3>Planned Topics:</h3>
               <ul>
-                <li>Use Infrastructure as Code (IaC) for to build a data platform</li>
+                <li>Building Scalable Data Pipelines with Databricks</li>
+                <li>Infrastructure as Code Best Practices</li>
+                <li>Optimizing Python for Data Processing</li>
+                <li>Cloud Architecture Patterns</li>
+                <li>Machine Learning in Production</li>
               </ul>
             </div>
           </div>

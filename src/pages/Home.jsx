@@ -92,14 +92,9 @@ const Home = () => {
       period: 'Aug 2024 - Present',
       location: 'Gothenburg, Sweden',
       jobType: 'Full-time',
-  description: 'Currently working as a data platform engineer at Aurobay. I spend my days building data pipelines, automating boring stuff, and making sure warranty data actually makes sense for the analytics team.',
+      description: 'Databricks platform development and operations. Building scalable data pipelines and infrastructure templates. Joined Hubbau\'s young talent program.',
       technologies: ['Databricks', 'Azure', 'Terraform', 'Python', 'Spark', 'SQL', 'Delta Lake', 'CI/CD', 'GitHub Actions'],
-      achievements: [
-        'Built some pretty cool warranty data pipelines that actually work',
-        'Created infrastructure templates so teams don\'t have to start from scratch',
-        'Helped 4 teams get set up without wanting to pull their hair out',
-        'Got to be part of Hubbau\'s young talent program (still feels surreal!)'
-      ]
+      achievements: 'Built data pipelines, created Azure Databricks Platform infrastructure templates, onboarded 4 teams to the platform, built Asset Bundle template for easy deployment.'
     },
     {
       type: 'work',
@@ -108,13 +103,9 @@ const Home = () => {
       period: 'Jan 2024 - Jun 2024',
       location: 'Gothenburg, Sweden',
       jobType: 'Thesis Project',
-      description: 'Spent 6 months trying to teach computers to spot forgotten bags and phones in cars. Turns out computer vision is harder than it looks, but super rewarding when it finally works!',
+      description: 'Developed object detection algorithms for forgotten items in cars using computer vision.',
       technologies: ['C++', 'Machine Learning', 'Computer Vision', 'OpenCV', 'ROS', 'MobileNetV2', 'Embedded Systems'],
-      achievements: [
-        'Got an object detection algorithm working on tiny embedded devices',
-        'Learned that Jetson Nano is both amazing and frustrating',
-        'Discovered I actually enjoy the intersection of AI and automotive tech'
-      ]
+      achievements: 'Implemented object detection on embedded devices, optimized for Jetson Nano, explored AI in automotive.'
     },
     {
       type: 'education',
@@ -123,8 +114,8 @@ const Home = () => {
       specialization: 'Algorithms, Languages and Logic',
       period: 'Aug 2022 - Aug 2024',
       location: 'Gothenburg, Sweden',
-      description: 'Two intense years diving deep into the theoretical side of CS. Got to explore functional programming (Haskell is wild!), machine learning, and cybersecurity. ',
-      gpa: 'Graduated!',
+      description: 'Advanced CS studies focusing on theoretical foundations, functional programming, and machine learning.',
+      gpa: 'Completed',
       relevantCourses: ['Functional Programming', 'Machine Learning', 'Cyber Security', 'Programming Language Technology']
     },
     {
@@ -134,13 +125,9 @@ const Home = () => {
       period: 'Jun 2023 - Aug 2023',
       location: 'Gothenburg, Sweden',
       jobType: 'Summer Internship',
-      description: 'My first real taste of "enterprise" data engineering. Spent the summer converting simulation data into PostgreSQL tables - sounds boring but was actually pretty fascinating!',
+      description: 'Converted autonomous vehicle simulation data into PostgreSQL databases.',
       technologies: ['Python', 'PostgreSQL', 'Git', 'JIRA', 'Parallel Processing', 'Docker'],
-      achievements: [
-        'Somehow managed to convert all the data without breaking anything',
-        'Discovered that parallel processing can make things ridiculously fast',
-        'Learned that autonomous vehicles generate A LOT of data'
-      ]
+      achievements: 'Successfully migrated simulation data, implemented parallel processing, handled large-scale autonomous vehicle datasets.'
     },
     {
       type: 'education',
@@ -148,25 +135,21 @@ const Home = () => {
       school: 'Dalarna University',
       period: '2020 - 2022',
       location: 'Sweden',
-      description: 'Where I first fell in love with programming and learned that IT isn\'t just about fixing computers. Got to explore everything from web development to business strategy, and even wrote my thesis on how ports can go digital.',
+      description: 'Foundation in programming, web development, and business strategy with focus on digital transformation.',
       gpa: 'Completed',
       relevantCourses: ['Java Programming', 'Web Development', 'Database Systems', 'Machine Learning', 'Business Strategy']
-    },
-    {
-      type: 'work',
-      role: 'Data Analyst Intern',
-      company: 'Hikvision',
-      period: 'Jan 2021 - Feb 2021',
-      location: 'Nanchang, China',
-      jobType: 'Winter Internship',
-      description: 'My very first tech internship! Learned the basics of data analysis, built my first machine learning models, and discovered that web scraping is both useful and slightly addictive.',
-      technologies: ['Python', 'MySQL', 'scikit-learn', 'Beautiful Soup', 'Web Scraping'],
-      achievements: [
-        'Built my first "real" ML models (they actually worked!)',
-        'Got really good at scraping data from websites',
-        'Realized I wanted to do more of this computer stuff'
-      ]
     }
+    // {
+    //   type: 'work',
+    //   role: 'Data Analyst Intern',
+    //   company: 'Hikvision',
+    //   period: 'Jan 2021 - Feb 2021',
+    //   location: 'Nanchang, China',
+    //   jobType: 'Winter Internship',
+    //   description: 'First tech internship focusing on data analysis and machine learning model development.',
+    //   technologies: ['Python', 'MySQL', 'scikit-learn', 'Beautiful Soup', 'Web Scraping'],
+    //   achievements: 'Built first ML models, mastered web scraping techniques, discovered passion for data engineering.'
+    // }
   ]
 
   return (
@@ -396,10 +379,10 @@ const Home = () => {
       {/* Experience Section */}
       <motion.section
         className="experience-section"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true, margin: "-30px" }}
       >
         <div className="section-container">
           <h2>My Journey So Far</h2>
@@ -410,20 +393,20 @@ const Home = () => {
               <motion.div
                 key={`${item.type}-${index}`}
                 className={`timeline-item ${item.type}-item`}
-                initial={{ opacity: 0, x: -50, scale: 0.9 }}
+                initial={{ opacity: 0, x: -50, scale: 0.95 }}
                 whileInView={{ 
                   opacity: 1, 
                   x: 0, 
                   scale: 1,
                   transition: {
-                    duration: 0.8,
-                    delay: index * 0.2,
+                    duration: 0.4,
+                    delay: index * 0.1,
                     type: "spring",
-                    stiffness: 100,
-                    damping: 12
+                    stiffness: 120,
+                    damping: 15
                   }
                 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ 
                   scale: 1.02,
                   transition: { duration: 0.2 }
@@ -431,23 +414,22 @@ const Home = () => {
               >
                 <motion.div 
                   className={`timeline-marker ${item.type}-marker`}
-                  initial={{ scale: 0, rotate: -180 }}
+                  initial={{ scale: 0, rotate: -90 }}
                   whileInView={{ 
                     scale: 1, 
                     rotate: 0,
                     transition: {
-                      duration: 0.6,
-                      delay: index * 0.2 + 0.3,
+                      duration: 0.3,
+                      delay: index * 0.1 + 0.1,
                       type: "spring",
-                      stiffness: 200,
-                      damping: 15
+                      stiffness: 250,
+                      damping: 20
                     }
                   }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, margin: "-50px" }}
                   whileHover={{ 
                     scale: 1.1,
-                    rotate: 360,
-                    transition: { duration: 0.5 }
+                    transition: { duration: 0.2 }
                   }}
                 >
                   {item.type === 'work' ? (
@@ -458,31 +440,31 @@ const Home = () => {
                 </motion.div>
                 <motion.div 
                   className="timeline-content"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ 
                     opacity: 1, 
                     y: 0,
                     transition: {
-                      duration: 0.6,
-                      delay: index * 0.2 + 0.4
+                      duration: 0.3,
+                      delay: index * 0.1 + 0.2
                     }
                   }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-30px" }}
                 >
                   {item.type === 'work' ? (
                     <>
                       <motion.div 
                         className="content-header"
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -15 }}
                         whileInView={{ 
                           opacity: 1, 
                           x: 0,
                           transition: {
-                            duration: 0.5,
-                            delay: index * 0.2 + 0.5
+                            duration: 0.3,
+                            delay: index * 0.1 + 0.25
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         <div className="title-info">
                           <h3 className="role-title">{item.role}</h3>
@@ -495,13 +477,13 @@ const Home = () => {
                             opacity: 1, 
                             scale: 1,
                             transition: {
-                              duration: 0.4,
-                              delay: index * 0.2 + 0.7,
+                              duration: 0.2,
+                              delay: index * 0.1 + 0.3,
                               type: "spring",
-                              stiffness: 300
+                              stiffness: 350
                             }
                           }}
-                          viewport={{ once: true, margin: "-50px" }}
+                          viewport={{ once: true, margin: "-30px" }}
                         >
                           {item.jobType}
                         </motion.div>
@@ -509,16 +491,16 @@ const Home = () => {
                       
                       <motion.div 
                         className="content-meta"
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 8 }}
                         whileInView={{ 
                           opacity: 1, 
                           y: 0,
                           transition: {
-                            duration: 0.4,
-                            delay: index * 0.2 + 0.6
+                            duration: 0.25,
+                            delay: index * 0.1 + 0.3
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         <div className="meta-item">
                           <Calendar size={16} />
@@ -532,68 +514,49 @@ const Home = () => {
                       
                       <motion.p 
                         className="content-description"
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ 
                           opacity: 1, 
                           y: 0,
                           transition: {
-                            duration: 0.5,
-                            delay: index * 0.2 + 0.7
+                            duration: 0.25,
+                            delay: index * 0.1 + 0.35
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         {item.description}
                       </motion.p>
                       
                       <motion.div 
                         className="achievements"
-                        initial={{ opacity: 0, x: -15 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ 
                           opacity: 1, 
                           x: 0,
                           transition: {
-                            duration: 0.6,
-                            delay: index * 0.2 + 0.8
+                            duration: 0.3,
+                            delay: index * 0.1 + 0.4
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
-                        <h5>What I Actually Did</h5>
-                        <ul>
-                          {item.achievements.map((achievement, i) => (
-                            <motion.li 
-                              key={i}
-                              initial={{ opacity: 0, x: -20 }}
-                              whileInView={{ 
-                                opacity: 1, 
-                                x: 0,
-                                transition: {
-                                  duration: 0.4,
-                                  delay: index * 0.2 + 0.9 + (i * 0.1)
-                                }
-                              }}
-                              viewport={{ once: true, margin: "-50px" }}
-                            >
-                              <Star size={12} />
-                              <span>{achievement}</span>
-                            </motion.li>
-                          ))}
-                        </ul>
+                        <h5>Key Achievements</h5>
+                        <p className="achievements-text">{item.achievements}</p>
                       </motion.div>
                       
                       <motion.div 
                         className="technologies"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         whileInView={{ 
                           opacity: 1, 
                           y: 0,
                           transition: {
-                            duration: 0.5,
-                            delay: index * 0.2 + 1.2
+                            duration: 0.25,
+                            delay: index * 0.1 + 0.45
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         {item.technologies.map((tech, i) => (
                           <motion.span 
@@ -604,16 +567,16 @@ const Home = () => {
                               opacity: 1, 
                               scale: 1,
                               transition: {
-                                duration: 0.3,
-                                delay: index * 0.2 + 1.3 + (i * 0.05),
+                                duration: 0.2,
+                                delay: index * 0.1 + 0.5 + (i * 0.02),
                                 type: "spring",
-                                stiffness: 400
+                                stiffness: 450
                               }
                             }}
-                            viewport={{ once: true, margin: "-50px" }}
+                            viewport={{ once: true, margin: "-30px" }}
                             whileHover={{ 
-                              scale: 1.1,
-                              transition: { duration: 0.2 }
+                              scale: 1.05,
+                              transition: { duration: 0.15 }
                             }}
                           >
                             {tech}
@@ -625,16 +588,16 @@ const Home = () => {
                     <>
                       <motion.div 
                         className="content-header"
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -15 }}
                         whileInView={{ 
                           opacity: 1, 
                           x: 0,
                           transition: {
-                            duration: 0.5,
-                            delay: index * 0.2 + 0.5
+                            duration: 0.3,
+                            delay: index * 0.1 + 0.25
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         <div className="title-info">
                           <h3 className="degree-title">{item.degree}</h3>
@@ -650,13 +613,13 @@ const Home = () => {
                             opacity: 1, 
                             scale: 1,
                             transition: {
-                              duration: 0.4,
-                              delay: index * 0.2 + 0.7,
+                              duration: 0.2,
+                              delay: index * 0.1 + 0.3,
                               type: "spring",
-                              stiffness: 300
+                              stiffness: 350
                             }
                           }}
-                          viewport={{ once: true, margin: "-50px" }}
+                          viewport={{ once: true, margin: "-30px" }}
                         >
                           {item.gpa}
                         </motion.div>
@@ -664,16 +627,16 @@ const Home = () => {
                       
                       <motion.div 
                         className="content-meta"
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 8 }}
                         whileInView={{ 
                           opacity: 1, 
                           y: 0,
                           transition: {
-                            duration: 0.4,
-                            delay: index * 0.2 + 0.6
+                            duration: 0.25,
+                            delay: index * 0.1 + 0.3
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         <div className="meta-item">
                           <Calendar size={16} />
@@ -687,34 +650,34 @@ const Home = () => {
                       
                       <motion.p 
                         className="content-description"
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ 
                           opacity: 1, 
                           y: 0,
                           transition: {
-                            duration: 0.5,
-                            delay: index * 0.2 + 0.7
+                            duration: 0.25,
+                            delay: index * 0.1 + 0.35
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
                         {item.description}
                       </motion.p>
                       
                       <motion.div 
                         className="relevant-courses"
-                        initial={{ opacity: 0, x: -15 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ 
                           opacity: 1, 
                           x: 0,
                           transition: {
-                            duration: 0.6,
-                            delay: index * 0.2 + 0.8
+                            duration: 0.3,
+                            delay: index * 0.1 + 0.4
                           }
                         }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-30px" }}
                       >
-                        <h5>Cool Stuff I Learned</h5>
+                        <h5>Key Courses</h5>
                         <div className="courses">
                           {item.relevantCourses.map((course, i) => (
                             <motion.span 
@@ -725,16 +688,16 @@ const Home = () => {
                                 opacity: 1, 
                                 scale: 1,
                                 transition: {
-                                  duration: 0.3,
-                                  delay: index * 0.2 + 0.9 + (i * 0.05),
+                                  duration: 0.2,
+                                  delay: index * 0.1 + 0.45 + (i * 0.02),
                                   type: "spring",
-                                  stiffness: 400
+                                  stiffness: 450
                                 }
                               }}
-                              viewport={{ once: true, margin: "-50px" }}
+                              viewport={{ once: true, margin: "-30px" }}
                               whileHover={{ 
-                                scale: 1.1,
-                                transition: { duration: 0.2 }
+                                scale: 1.05,
+                                transition: { duration: 0.15 }
                               }}
                             >
                               {course}
