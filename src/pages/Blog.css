@@ -225,6 +225,67 @@
   line-height: 1.6;
 }
 
+/* Empty State */
+.empty-state {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.empty-state-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.empty-icon {
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.empty-state h2 {
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.empty-state > .empty-state-content > p {
+  color: #4a5568;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.planned-topics {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.planned-topics h3 {
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.planned-topics ul {
+  list-style: none;
+  padding: 0;
+}
+
+.planned-topics li {
+  padding: 0.5rem 0;
+  color: #4a5568;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.planned-topics li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
 /* Newsletter Section */
 .newsletter {
   padding: 4rem 0;

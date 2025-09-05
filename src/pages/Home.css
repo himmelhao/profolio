@@ -2053,6 +2053,13 @@
   line-height: 1.5;
 }
 
+.achievements-text {
+  color: var(--color-soft-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .work-item .achievements li svg {
   color: var(--color-deep-pink);
   margin-top: 0.2rem;

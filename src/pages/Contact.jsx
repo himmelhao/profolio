@@ -25,23 +25,21 @@ const Contact = () => {
     setSubmitStatus('loading')
     
     try {
-      // Using Formspree service for form handling
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+      // Using Formspree service for form handling - you need to set up your form at formspree.io
+      // For now, using mailto as a fallback
+      const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio')
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      )
+      const mailtoUrl = `mailto:haohu001108@gmail.com?subject=${subject}&body=${body}`
       
-      if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', subject: '', message: '' })
-        setTimeout(() => setSubmitStatus(''), 5000)
-      } else {
-        setSubmitStatus('error')
-        setTimeout(() => setSubmitStatus(''), 5000)
-      }
+      // Open email client
+      window.open(mailtoUrl, '_blank')
+      
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', subject: '', message: '' })
+      setTimeout(() => setSubmitStatus(''), 5000)
+      
     } catch (error) {
       console.error('Error submitting form:', error)
       setSubmitStatus('error')
@@ -141,7 +139,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                 >
                   <CheckCircle size={16} />
-                  Message sent successfully! I'll get back to you soon.
+                  Email client opened! Your message will be sent to haohu001108@gmail.com
                 </motion.div>
               )}
 
@@ -152,7 +150,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                 >
                   <AlertCircle size={16} />
-                  Failed to send message. Please try again.
+                  Failed to open email client. Please email me directly at haohu001108@gmail.com
                 </motion.div>
               )}
             </form>
