@@ -193,10 +193,10 @@ const Home = () => {
               
               <div className="social-and-cv">
                 <div className="social-links">
-                  <a href="https://github.com/haohu1108" className="social-link" aria-label="GitHub">
+                  <a href="https://github.com/himmelhao" className="social-link" aria-label="GitHub">
                     <Github size={24} />
                   </a>
-                  <a href="https://www.linkedin.com/in/haohu1108/" className="social-link" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/in/himmelhao/" className="social-link" aria-label="LinkedIn">
                     <Linkedin size={24} />
                   </a>
                 </div>
