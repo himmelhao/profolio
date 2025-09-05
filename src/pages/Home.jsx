@@ -387,44 +387,34 @@ const Home = () => {
               <motion.div
                 key={`${item.type}-${index}`}
                 className={`timeline-item ${item.type}-item`}
-                initial={{ opacity: 0, x: -50, scale: 0.95 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ 
                   opacity: 1, 
-                  x: 0, 
-                  scale: 1,
+                  x: 0,
                   transition: {
-                    duration: 0.4,
+                    duration: 0.5,
                     delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 120,
-                    damping: 15
+                    ease: "easeOut"
                   }
                 }}
                 viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ 
-                  scale: 1.02,
+                  x: 5,
                   transition: { duration: 0.2 }
                 }}
               >
                 <motion.div 
                   className={`timeline-marker ${item.type}-marker`}
-                  initial={{ scale: 0, rotate: -90 }}
+                  initial={{ opacity: 0 }}
                   whileInView={{ 
-                    scale: 1, 
-                    rotate: 0,
+                    opacity: 1,
                     transition: {
                       duration: 0.3,
                       delay: index * 0.1 + 0.1,
-                      type: "spring",
-                      stiffness: 250,
-                      damping: 20
+                      ease: "easeOut"
                     }
                   }}
                   viewport={{ once: true, margin: "-50px" }}
-                  whileHover={{ 
-                    scale: 1.1,
-                    transition: { duration: 0.2 }
-                  }}
                 >
                   {item.type === 'work' ? (
                     <Building size={20} />
@@ -466,15 +456,14 @@ const Home = () => {
                         </div>
                         <motion.div 
                           className="job-type-badge"
-                          initial={{ opacity: 0, scale: 0 }}
+                          initial={{ opacity: 0, y: 10 }}
                           whileInView={{ 
                             opacity: 1, 
-                            scale: 1,
+                            y: 0,
                             transition: {
-                              duration: 0.2,
+                              duration: 0.3,
                               delay: index * 0.1 + 0.3,
-                              type: "spring",
-                              stiffness: 350
+                              ease: "easeOut"
                             }
                           }}
                           viewport={{ once: true, margin: "-30px" }}
@@ -556,20 +545,19 @@ const Home = () => {
                           <motion.span 
                             key={i} 
                             className="tech-tag work-tech"
-                            initial={{ opacity: 0, scale: 0 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ 
                               opacity: 1, 
-                              scale: 1,
+                              y: 0,
                               transition: {
-                                duration: 0.2,
+                                duration: 0.3,
                                 delay: index * 0.1 + 0.5 + (i * 0.02),
-                                type: "spring",
-                                stiffness: 450
+                                ease: "easeOut"
                               }
                             }}
                             viewport={{ once: true, margin: "-30px" }}
                             whileHover={{ 
-                              scale: 1.05,
+                              y: -2,
                               transition: { duration: 0.15 }
                             }}
                           >
@@ -602,15 +590,14 @@ const Home = () => {
                         </div>
                         <motion.div 
                           className="gpa-badge"
-                          initial={{ opacity: 0, scale: 0 }}
+                          initial={{ opacity: 0, y: 10 }}
                           whileInView={{ 
                             opacity: 1, 
-                            scale: 1,
+                            y: 0,
                             transition: {
-                              duration: 0.2,
+                              duration: 0.3,
                               delay: index * 0.1 + 0.3,
-                              type: "spring",
-                              stiffness: 350
+                              ease: "easeOut"
                             }
                           }}
                           viewport={{ once: true, margin: "-30px" }}
@@ -677,20 +664,19 @@ const Home = () => {
                             <motion.span 
                               key={i} 
                               className="course-tag education-course"
-                              initial={{ opacity: 0, scale: 0 }}
+                              initial={{ opacity: 0, y: 10 }}
                               whileInView={{ 
                                 opacity: 1, 
-                                scale: 1,
+                                y: 0,
                                 transition: {
-                                  duration: 0.2,
+                                  duration: 0.3,
                                   delay: index * 0.1 + 0.45 + (i * 0.02),
-                                  type: "spring",
-                                  stiffness: 450
+                                  ease: "easeOut"
                                 }
                               }}
                               viewport={{ once: true, margin: "-30px" }}
                               whileHover={{ 
-                                scale: 1.05,
+                                y: -2,
                                 transition: { duration: 0.15 }
                               }}
                             >
