@@ -134,7 +134,7 @@ const Home = () => {
       degree: 'Bachelor of Information Systems',
       school: 'Dalarna University',
       period: '2020 - 2022',
-      location: 'Sweden',
+      location: 'Borlänge, Sweden',
       description: 'Foundation in programming, web development, and business strategy with focus on digital transformation.',
       gpa: 'Completed',
       relevantCourses: ['Java Programming', 'Web Development', 'Database Systems', 'Machine Learning', 'Business Strategy']
