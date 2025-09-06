@@ -12,7 +12,7 @@ const Projects = () => {
       title: 'Personal Portfolio Website',
       shortDescription: 'A responsive portfolio website built with React and Vite showcasing modern web development skills.',
       fullDescription: 'This portfolio website demonstrates my front-end development capabilities using modern technologies and best practices. The project showcases clean design principles, smooth user interactions, and optimized performance.',
-      image: '/api/placeholder/400/250',
+      image: '/profolio-start-page.png',
       technologies: ['React', 'Vite', 'JavaScript', 'CSS3', 'Framer Motion', 'Responsive Design'],
       githubUrl: 'https://github.com/himmelhao/profolio',
       technicalDetails: {
@@ -80,9 +80,7 @@ const Projects = () => {
                 style={{ cursor: 'pointer' }}
               >
                 <div className="project-image">
-                  <div className="image-placeholder">
-                    <Calendar size={40} />
-                  </div>
+                  <img src={project.image} alt={project.title} />
                 </div>
                 <div className="project-content">
                   <h3>{project.title}</h3>
