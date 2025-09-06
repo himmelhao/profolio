@@ -294,17 +294,3 @@
   box-shadow: var(--shadow-soft);
   padding: var(--space-md) 0;
 }
-
-/* Natural Grain Effect on Navigation */
-.desktop-nav::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 25% 25%, rgba(120, 113, 108, 0.01) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(120, 113, 108, 0.01) 0%, transparent 50%);
-  pointer-events: none;
-}
