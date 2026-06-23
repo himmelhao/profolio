@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
+import DatasphereIntegration from './pages/DatasphereIntegration'
 import './App.css'
 import './styles/responsive.css'
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/datasphere-integration" element={<DatasphereIntegration />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </motion.main>

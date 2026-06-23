@@ -1,8 +1,20 @@
 import { motion } from 'framer-motion'
 import { Calendar, Clock, ArrowRight, FileText } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import './Blog.css'
 
 const Blog = () => {
+  const blogPosts = [
+    {
+      id: 'datasphere-integration',
+      title: 'Integrating SAP Datasphere with Databricks',
+      excerpt: 'Building a production-grade JDBC connector for reliable data extraction',
+      date: 'June 2026',
+      readTime: '8 min',
+      skills: ['Databricks', 'PySpark', 'JDBC'],
+    },
+  ]
+
   return (
     <div className="blog">
       <div className="container">
@@ -13,28 +25,43 @@ const Blog = () => {
           transition={{ duration: 0.8 }}
         >
           <h1>Blog & Insights</h1>
-          <p>This is where I'll share my thoughts on data engineering, cloud infrastructure, and software development. Stay tuned for upcoming content!</p>
+          <p>Technical deep-dives on data engineering, cloud infrastructure, and software development.</p>
         </motion.section>
 
-        {/* Empty State */}
+        {/* Blog Posts */}
         <motion.section
-          className="empty-state"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="blog-posts"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="empty-state-content">
-            <FileText size={80} className="empty-icon" />
-            <h2>Coming Soon</h2>
-            <p>I'm currently working on some exciting blog posts about data engineering, cloud infrastructure, and software development. Check back soon for fresh insights and technical deep-dives!</p>
-            <div className="planned-topics">
-              <h3>Planned Topics:</h3>
-              <ul>
-                <li>Use Infrastructure as Code (IaC) for to build a data platform</li>
-              </ul>
-            </div>
-          </div>
+          {blogPosts.map((post) => (
+            <motion.article
+              key={post.id}
+              className="blog-card"
+              whileHover={{ y: -5 }}
+            >
+              <Link to={`/blog/${post.id}`} className="card-link">
+                <div className="card-header">
+                  <h3>{post.title}</h3>
+                  <ArrowRight size={20} className="card-icon" />
+                </div>
+                <p className="card-excerpt">{post.excerpt}</p>
+                <div className="card-meta">
+                  <span><Calendar size={14} /> {post.date}</span>
+                  <span><Clock size={14} /> {post.readTime}</span>
+                </div>
+                <div className="card-skills">
+                  {post.skills.map((skill) => (
+                    <span key={skill} className="skill-badge">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            </motion.article>
+          ))}
         </motion.section>
 
         {/* Newsletter Section */}
